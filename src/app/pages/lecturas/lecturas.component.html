@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-md-6 col-sm-12">
+
+        <div class="card">
+            <h5>Última Temperatura</h5>
+            <div class="currentTemp">
+                <span [ngClass]="{
+                    'hot':currentTemp >= 30,
+                    'cold':currentTemp <= 5
+
+                }">{{currentTemp}}°C</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <div class="card">
+            <h5>Promedio Temperaturas</h5>
+            <!-- <ngx-charts-gauge [scheme]="colorScheme" [animations]=true [results]="single" [legend]="legend" [max]=60
+                [showText]="false" [legendPosition]="legendPosition" (select)="onSelect($event)"
+                (activate)="onActivate($event)" (deactivate)="onDeactivate($event)">
+            </ngx-charts-gauge> -->
+            <div class="currentTemp">
+                <span [ngClass]="{
+                    'hot':currentTemp >= 30,
+                    'cold':currentTemp <= 5
+
+                }">{{promTemp | number:'.0-2'}}°C</span>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-12">
+
+        <div class="card">
+            <h5>Histórico de Temperaturas</h5>
+            <ngx-charts-line-chart [scheme]="colorSchemeGlobal" [legend]="false" [showXAxisLabel]="showXAxisLabelGlobal"
+                [showYAxisLabel]="showYAxisLabelGlobal" [xAxis]="xAxisGlobal" [yAxis]="yAxisGlobal"
+                [xAxisLabel]="xAxisLabelGlobal" [yAxisLabel]="yAxisLabelGlobal" [timeline]="true"
+                [results]="singleGlobal" [yAxisTickFormatting]="axisFormat" (select)="onSelect($event)" (activate)="onActivate($event)"
+                (deactivate)="onDeactivate($event)">
+            </ngx-charts-line-chart>
+        </div>
+    </div>
+
+</div>

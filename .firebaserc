@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "proyecto-fdse"
+  },
+  "targets": {
+    "proyecto-fdse": {
+      "hosting": {
+        "controlador-temperatura": [
+          "proyecto-fdse"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.card{
+    padding: 15px;
+    background: #e4e4e4;
+    text-align: center;
+    height: 40vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    justify-content: space-evenly;
+
+    h5{
+        color: rgb(42, 42, 42);
+        font-size: x-large;
+    }
+
+    h3{
+        color: rgb(26, 26, 26);
+    }
+
+    .currentTemp{
+        font-size: 2rem;
+        color: white;
+    }
+}
+
+.justify{
+    justify-content: center;
+    .currentTemp{
+        font-size: 4em;
+    }
+}

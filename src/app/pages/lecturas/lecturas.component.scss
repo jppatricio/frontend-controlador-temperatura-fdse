@@ -1,0 +1,42 @@
+.card {
+    padding: 15px;
+    background: #e4e4e4;
+    text-align: center;
+    height: 40vh;
+    overflow: hidden;
+    overflow-y: scroll;
+
+    h5 {
+        color: rgb(42, 42, 42);
+        font-size: x-large;
+    }
+
+    .currentTemp {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span{
+            font-size: 4rem;
+        }
+        .hot{
+            color: rgb(190, 40, 40);
+        }
+        .cold{
+            color: rgb(40, 118, 190);
+        }
+    }
+
+    .ngx-charts {
+        text {
+            fill: red;
+        }
+    }
+}
+
+.justify {
+    justify-content: center;
+    .currentTemp {
+        font-size: 4em;
+    }
+}

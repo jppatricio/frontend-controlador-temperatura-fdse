@@ -1,0 +1,41 @@
+<nav id="sidebar" [class.active]="classApplied">
+    <div class="custom-menu">
+        <button type="button" (click)="toggleClass()" id="sidebarCollapse" class="btn btn-primary">
+        </button>
+    </div>
+    <div class="img bg-wrap text-center py-4"
+        style="background-image: url(https://alanxelmundo.com/wp-content/uploads/2019/04/biblioteca.jpg);">
+        <div class="user-logo">
+            <div class="img"></div>
+            <h3>Proyecto Final<br>Fundamentos de Sistemas Embebidos</h3>
+
+        </div>
+    </div>
+    <ul class="list-unstyled components mb-5">
+        <div class="text-center py-4">
+
+            <h4>Jaime Porras Patricio</h4>
+            <h4>Esparza Vázquez Luis Mauricio</h4>
+            <h4>Pichardo González Jenny Alejandra</h4>
+            <h4>Orozco Magadan Brandon</h4>
+
+
+            <hr class="separator">
+        </div>
+
+        <li (click)="selectedPage = 1" [ngClass]="{'active': selectedPage === 1}">
+            <a [routerLink]="['/inicio']"><span class="fa fa-home mr-3"></span> Inicio</a>
+        </li>
+        <li (click)="selectedPage = 2" [ngClass]="{'active': selectedPage === 2}">
+            <a [routerLink]="['/lecturas']"><span class="fa fa-clipboard mr-3"></span> Lecturas</a>
+        </li>
+        <li (click)="selectedPage = 3" [ngClass]="{'active': selectedPage === 3}">
+            <a [routerLink]="['/limites']"><span class="fa fa-thermometer-half mr-3"></span> Límites</a>
+        </li>
+        <li>
+            <a href="https://github.com/jppatricio" target="_blank"><span
+                    class="fa fa-github mr-3"></span> Github</a>
+        </li>
+    </ul>
+
+</nav>
