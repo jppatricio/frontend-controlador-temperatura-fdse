@@ -8,7 +8,7 @@
                     'hot':currentTemp >= 30,
                     'cold':currentTemp <= 5
 
-                }">{{currentTemp}}°C</span>
+                }">{{currentTemp}}°{{tempUnits}}</span>
             </div>
         </div>
     </div>
@@ -24,7 +24,7 @@
                     'hot':currentTemp >= 30,
                     'cold':currentTemp <= 5
 
-                }">{{promTemp | number:'.0-2'}}°C</span>
+                }">{{promTemp | number:'.0-2'}}{{tempUnits}}</span>
             </div>
         </div>
     </div>
@@ -43,5 +43,11 @@
             </ngx-charts-line-chart>
         </div>
     </div>
+
+    <div class="example-button-container" style="position: absolute; bottom: 0; right: 0;">
+        <button (click)="changeTempUnit()" mat-fab color="warn" aria-label="Example icon button with a home icon">
+          <mat-icon>device_thermostat</mat-icon>
+        </button>
+      </div>
 
 </div>

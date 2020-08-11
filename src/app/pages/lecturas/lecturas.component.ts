@@ -11,7 +11,7 @@ export class LecturasComponent implements OnInit {
 
   currentTemp = 0
   promTemp = 0
-  units = "°C"
+  tempUnits = "C"
 
   single: {
     'name': string,
@@ -85,10 +85,16 @@ export class LecturasComponent implements OnInit {
 
       this.currentTemp = this.single[this.single.length - 1].value;
 
+      
 
       Object.assign(this, this.singleGlobal);
       Object.assign(this, this.single);
     });
+
+    if(this.tempUnits == "F"){
+      this.currentTemp = (this.currentTemp - 32) * 5/9;
+      this.promTemp = (this.promTemp - 32) * 5/9;
+    }
   }
 
   onSelect(data): void {
@@ -112,6 +118,19 @@ export class LecturasComponent implements OnInit {
 
   axisFormat(val) {
     return val.toLocaleString() + "°C"; 
+  }
+
+  changeTempUnit(){
+    if(this.tempUnits == "C"){
+      this.tempUnits = "F"
+      this.currentTemp = (this.currentTemp * 9/5) + 32;
+      this.promTemp = (this.promTemp * 9/5) + 32;
+    }
+    else{
+      this.tempUnits = "C"
+      this.currentTemp = (this.currentTemp - 32) * 5/9;
+      this.promTemp = (this.promTemp - 32) * 5/9;
+    }
   }
 
 }

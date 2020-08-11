@@ -4,7 +4,9 @@ import { InicioComponent } from './inicio/inicio.component';
 import { LecturasComponent } from './lecturas/lecturas.component';
 import { LimitesComponent } from './limites/limites.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -13,7 +15,9 @@ import { ReactiveFormsModule } from '@angular/forms'
   imports: [
     CommonModule,
     NgxChartsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatIconModule
   ]
 })
 export class PagesModule { }

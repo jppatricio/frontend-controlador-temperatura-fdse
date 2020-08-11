@@ -256,3 +256,5 @@ a.text-primary:hover, a.text-primary:focus {
 ::-webkit-scrollbar-thumb:hover {
   background: #9b9b9b; 
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
